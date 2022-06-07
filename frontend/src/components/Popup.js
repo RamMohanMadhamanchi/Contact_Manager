@@ -19,7 +19,7 @@ const Popup = ({ fetchData, setIsPop, setSuccessUp }) => {
 
     const response = await jsonData.json();
     fetchData();
-    if (response.status === "sucess") {
+    if (response.status === "success") {
       setSuccessUp(true);
       setTimeout(() => {
         setSuccessUp(false);

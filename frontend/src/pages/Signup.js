@@ -35,7 +35,7 @@ const Signup = () => {
       body: JSON.stringify(data),
     });
     const response = await proRes.json();
-    if (response.status === "sucess") {
+    if (response.status === "success") {
       navigate("/");
     } else {
       setMsg(response.message);

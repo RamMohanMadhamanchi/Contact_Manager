@@ -38,7 +38,7 @@ router.get("/contact", authenticateToken, async (req, res) => {
   try {
     const contacts = await Contact.find({ user: req.user._id });
     res.status(200).json({
-      status: "sucess",
+      status: "success",
       data: contacts,
     });
   } catch (e) {
@@ -60,7 +60,7 @@ router.delete("/contact", authenticateToken, async (req, res) => {
       }
     }
     res.json({
-      status: "sucess",
+      status: "success",
       data: req.body,
     });
   } catch (e) {
@@ -103,7 +103,7 @@ router.post(
       fs.unlinkSync(location);
 
       res.json({
-        status: "sucess",
+        status: "success",
       });
     } catch (e) {
       res.status(500).json({
@@ -142,7 +142,7 @@ router.post("/download", authenticateToken, async (req, res) => {
       );
     });
     res.json({
-      status: "sucess",
+      status: "success",
       link: "http://localhost:8000/api/Contacts",
     });
   } catch (e) {

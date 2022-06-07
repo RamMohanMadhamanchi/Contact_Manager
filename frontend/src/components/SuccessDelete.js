@@ -1,10 +1,10 @@
 import React from "react";
-import sucessDelete from "../utils/successDelete.svg";
+import successDelete from "../utils/successDelete.svg";
 
 const SuccessDelete = () => {
   return (
     <div className="popup">
-      <img src={sucessDelete} alt="SucessDelete" />
+      <img src={successDelete} alt="successDelete" />
     </div>
   );
 };

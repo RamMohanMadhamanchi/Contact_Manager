@@ -35,7 +35,7 @@ const SingleContact = ({
 
     const response = await getRes.json();
     fetchData();
-    if (response.status === "sucess") {
+    if (response.status === "success") {
       setSucDel(true);
       setTimeout(() => {
         setSucDel(false);

@@ -51,7 +51,7 @@ router.post("/user/signup", async (req, res) => {
     });
 
     res.json({
-      status: "sucess",
+      status: "success",
       data: await saveData.save(),
     });
   } catch (e) {
@@ -90,7 +90,7 @@ router.post("/user/signin", async (req, res) => {
     });
 
     res.status(200).json({
-      status: "sucess",
+      status: "success",
       user: {
         email: logUser[0].email,
         token,
@@ -106,7 +106,7 @@ router.post("/user/signin", async (req, res) => {
 
 router.get("/user/signin", authenticateToken, (req, res) => {
   res.json({
-    status: "sucess",
+    status: "success",
   });
 });
 module.exports = router;

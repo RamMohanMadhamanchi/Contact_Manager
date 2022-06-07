@@ -10,7 +10,7 @@ import importP from "../utils/import.svg";
 import exportP from "../utils/export.svg";
 import { motion } from "framer-motion";
 import Confirm from "./Confirm";
-import SucessDelete from "./SuccessDelete";
+import successDelete from "./SuccessDelete";
 import SuccessUpload from "./SuccessUpload";
 import Footer from "./Footer";
 
@@ -33,7 +33,7 @@ const AllContact = () => {
     });
 
     const data = await jsonData.json();
-    if (data.status === "sucess") {
+    if (data.status === "success") {
       dispatch({
         type: actionType.ADD_CONTACT,
         payload: { contact: data.data },
@@ -96,7 +96,7 @@ const AllContact = () => {
       body: JSON.stringify(state.mark),
     });
     const response = await jsonResponse.json();
-    if (response.status === "sucess") {
+    if (response.status === "success") {
       window.location.href = response.link;
     } else {
       navigate("/");
@@ -142,7 +142,7 @@ const AllContact = () => {
         </div>
 
         {successUp ? <SuccessUpload /> : ""}
-        {sucDel ? <SucessDelete /> : ""}
+        {sucDel ? <successDelete /> : ""}
         {conf ? <Confirm setConf={setConf} handleDelete={handleDelete} /> : ""}
         {isPop ? (
           <Popup

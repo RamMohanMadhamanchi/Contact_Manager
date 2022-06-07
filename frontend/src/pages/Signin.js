@@ -29,7 +29,7 @@ const Signin = () => {
       body: JSON.stringify(data),
     });
     const response = await proRes.json();
-    if (response.status === "sucess") {
+    if (response.status === "success") {
       dispatch({ type: actionType.ADD_USER, payload: { user: response.user } });
       navigate("/contact");
     } else {
@@ -49,7 +49,7 @@ const Signin = () => {
     });
 
     const data = await jsonData.json();
-    if (data.status === "sucess") {
+    if (data.status === "success") {
       navigate("/contact");
     }
   };
